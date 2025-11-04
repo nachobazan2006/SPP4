@@ -37,6 +37,8 @@
             btnValidar = new Button();
             btnMozoDelDia = new Button();
             btnTotales = new Button();
+            lblTitulo = new Label();
+            lblFrase = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvBar).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             dgvBar.AllowUserToResizeRows = false;
             dgvBar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBar.Columns.AddRange(new DataGridViewColumn[] { ColNombre, ColBebidasSAlchohol, ColBebidasCAlcohol, ColPostres, ColComidas });
-            dgvBar.Location = new Point(370, 85);
+            dgvBar.Location = new Point(21, 97);
             dgvBar.Name = "dgvBar";
             dgvBar.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgvBar.Size = new Size(610, 264);
@@ -81,7 +83,7 @@
             // 
             // btnValidar
             // 
-            btnValidar.Location = new Point(565, 315);
+            btnValidar.Location = new Point(218, 315);
             btnValidar.Name = "btnValidar";
             btnValidar.Size = new Size(75, 23);
             btnValidar.TabIndex = 1;
@@ -91,7 +93,7 @@
             // 
             // btnMozoDelDia
             // 
-            btnMozoDelDia.Location = new Point(713, 315);
+            btnMozoDelDia.Location = new Point(356, 315);
             btnMozoDelDia.Name = "btnMozoDelDia";
             btnMozoDelDia.Size = new Size(95, 23);
             btnMozoDelDia.TabIndex = 2;
@@ -101,7 +103,7 @@
             // 
             // btnTotales
             // 
-            btnTotales.Location = new Point(855, 315);
+            btnTotales.Location = new Point(499, 315);
             btnTotales.Name = "btnTotales";
             btnTotales.Size = new Size(99, 23);
             btnTotales.TabIndex = 3;
@@ -109,20 +111,44 @@
             btnTotales.UseVisualStyleBackColor = true;
             btnTotales.Click += btnTotales_Click;
             // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI Semibold", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(494, 50);
+            lblTitulo.TabIndex = 4;
+            lblTitulo.Text = "Registro de ventas de mozos";
+            // 
+            // lblFrase
+            // 
+            lblFrase.AutoSize = true;
+            lblFrase.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblFrase.Location = new Point(12, 412);
+            lblFrase.Name = "lblFrase";
+            lblFrase.Size = new Size(717, 30);
+            lblFrase.TabIndex = 5;
+            lblFrase.Text = "“Cada venta cuenta, pero el verdadero éxito está en el trabajo en equipo.”";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1454, 641);
+            BackColor = Color.Silver;
+            ClientSize = new Size(759, 543);
+            Controls.Add(lblFrase);
+            Controls.Add(lblTitulo);
             Controls.Add(btnTotales);
             Controls.Add(btnMozoDelDia);
             Controls.Add(btnValidar);
             Controls.Add(dgvBar);
             Name = "Form1";
             Text = "La milanga; mozos";
-            Load += Form1_Load;
+            Load += frmLaMilanga_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -136,5 +162,7 @@
         private DataGridViewTextBoxColumn ColBebidasCAlcohol;
         private DataGridViewTextBoxColumn ColPostres;
         private DataGridViewTextBoxColumn ColComidas;
+        private Label lblTitulo;
+        private Label lblFrase;
     }
 }

@@ -14,7 +14,7 @@ namespace frmLaMilanga
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmLaMilanga_Load(object sender, EventArgs e)
         {
             // Evitar la fila de nueva entrada vacía al final
             dgvBar.AllowUserToAddRows = false;
