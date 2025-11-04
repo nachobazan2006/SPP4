@@ -38,10 +38,10 @@ namespace frmLaMilanga
         {
             bool correcto = true;
 
-            // recorro todas las filas
+            // recorro  las filas
             for (int i = 0; i < dgvBar.Rows.Count; i++)
             {
-                // recorro todas las columnas excepto la 0 (nombres)
+                // recorro  las columnas excepto la 0 (nombres)
                 for (int j = 1; j < dgvBar.Columns.Count; j++)
                 {
                     // tomo el valor de la celda
@@ -76,6 +76,7 @@ namespace frmLaMilanga
 
         private void btnMozoDelDia_Click(object sender, EventArgs e)
         {
+            // creo el vector de mozos  
             string[] mozos = { "Julio", "Esteban", "Javier", "Gonzalo", "Alberto" };
 
             float mayorVenta = 0;
