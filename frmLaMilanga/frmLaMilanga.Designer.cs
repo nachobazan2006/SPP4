@@ -91,7 +91,7 @@
             // 
             // btnMozoDelDia
             // 
-            btnMozoDelDia.Location = new Point(715, 315);
+            btnMozoDelDia.Location = new Point(713, 315);
             btnMozoDelDia.Name = "btnMozoDelDia";
             btnMozoDelDia.Size = new Size(95, 23);
             btnMozoDelDia.TabIndex = 2;
@@ -101,7 +101,7 @@
             // 
             // btnTotales
             // 
-            btnTotales.Location = new Point(864, 315);
+            btnTotales.Location = new Point(855, 315);
             btnTotales.Name = "btnTotales";
             btnTotales.Size = new Size(99, 23);
             btnTotales.TabIndex = 3;
