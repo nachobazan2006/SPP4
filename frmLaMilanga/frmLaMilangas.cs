@@ -81,6 +81,7 @@ namespace frmLaMilanga
 
             float mayorVenta = 0;
             string mozoGanador = "";
+            List<string> ganadores = new List<string>();
             //arancamos estructura para recorrer las filas del datagridview
             for (int i = 0; i < dgvBar.Rows.Count; i++)
             {
@@ -101,18 +102,22 @@ namespace frmLaMilanga
                 if (total > mayorVenta)
                 {
                     mayorVenta = total;
-                    mozoGanador = mozos[i];
+                    ganadores.Clear();
+                    ganadores.Add(mozos[i]);
+
+                }
+                else if (total == mayorVenta)      
+                {
+                    ganadores.Add(mozos[i]);
                 }
             }
 
-            MessageBox.Show(
-                "Mozo del día: " + mozoGanador + "\n" +
-                "Importe total vendido: $" + mayorVenta.ToString("0.00"),
-                "Resultado",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            string Mensaje;
+            if (ganadores.Count == 1) 
+                Mensaje = $"El mozo del dìa es  { ganadores[0] } con un total de $  { mayorVenta }.";
+            else Mensaje = $"Empate entre {string.Join(",", ganadores)} con un total de ${mayorVenta}";
 
+            MessageBox.Show(Mensaje);
         }
 
         private void btnTotales_Click(object sender, EventArgs e)
