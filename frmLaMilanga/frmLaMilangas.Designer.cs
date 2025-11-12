@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             dgvBar = new DataGridView();
             ColNombre = new DataGridViewTextBoxColumn();
             ColBebidasSAlchohol = new DataGridViewTextBoxColumn();
@@ -143,6 +144,7 @@
             Controls.Add(btnMozoDelDia);
             Controls.Add(btnValidar);
             Controls.Add(dgvBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "La milanga; mozos";
             Load += frmLaMilanga_Load;
